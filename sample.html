@@ -1,0 +1,527 @@
+<section id="about-us" class="about-section">
+
+  <!-- BACKGROUND VIDEO -->
+  <video class="about-video-bg" autoplay muted loop playsinline>
+      <!-- 👉 Add your own video here -->
+      <source src="images/6558232-uhd_3840_2160_25fps.mp4" type="video/mp4">
+  </video>
+
+  <!-- ANIMATED COLOR OVERLAY -->
+  <div class="motion-bg"></div>
+
+  <!-- CONTENT BOX -->
+  <div class="about-container fade-up glass shadow-glow">
+
+      <div class="text-box">
+        <h1>About Us</h1>
+
+        <p>
+          Crafting Your Brand Identity with Creativity and Strategy.
+          At <strong>Prodbiz Solution</strong>, we combine innovation and smart 
+          design to elevate your digital presence.
+        </p>
+
+        <p>
+          Our team specializes in <strong>Branding, Digital Marketing, 
+          and Web Development</strong>—helping brands grow with powerful 
+          digital solutions and premium strategy.
+        </p>
+      </div>
+
+  </div>
+
+</section>
+
+<style>
+
+/* GLOBAL */
+* { scroll-behavior: smooth; }
+body { 
+  font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+  overflow-x: hidden;
+  background: #000;
+}
+
+/* SECTION BASE */
+.about-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* BACKGROUND VIDEO */
+.about-video-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.55);
+  z-index: -3;
+}
+
+/* COLOR ANIMATED BG */
+.motion-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg,
+      rgba(168,85,247,0.35),
+      rgba(14,165,233,0.28),
+      rgba(34,211,238,0.32),
+      rgba(16,185,129,0.24)
+  );
+  background-size: 180% 180%;
+  animation: gradientShift 16s ease-in-out infinite;
+  filter: blur(50px);
+  opacity: 0.85;
+  z-index: -1;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* MAIN GLASS CONTAINER (DARK PREMIUM) */
+.about-container {
+  position: relative;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 18vh;
+  padding: 45px;
+  border-radius: 24px;
+  backdrop-filter: blur(18px);
+  background: rgba(0, 0, 0, 0.42); /* ➤ Dark glass */
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 20px 70px rgba(0,0,0,0.55);
+  z-index: 5;
+  color: white;
+}
+
+/* GLASS EFFECT IMPROVED */
+.glass {
+  background: rgba(0,0,0,0.42);
+  border: 1px solid rgba(255,255,255,0.10);
+  backdrop-filter: blur(18px);
+}
+
+/* GLOW */
+.shadow-glow {
+  box-shadow: 0 20px 70px 
+}
+
+/* TEXT */
+.text-box h1 {
+  font-size: 46px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.text-box p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+/* SCROLL ANIMATION */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: all 700ms ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 950px) {
+  .about-container {
+    width: 85%;
+    padding: 35px;
+  }
+  .text-box h1 { font-size: 34px; }
+  .text-box p { font-size: 16px; }
+}
+
+</style>
+
+<script>
+// SCROLL EFFECT
+document.addEventListener("scroll", () => {
+  document.querySelectorAll(".fade-up").forEach((el) => {
+    const rect = el.getBoundingClientRect().top;
+    if (rect < window.innerHeight - 100) {
+      el.classList.add("visible");
+    }
+  });
+});
+</script>
+
+
+
+<section id="about-us">
+
+<div class="about-container">
+  <div class="about-circle"></div>
+
+  <h1>About us</h1>
+
+  <p>
+    We combine creativity and strategy to bring your brand to life. Our team specializes in branding, Digital Marketing, and Web Development, helping businesses of all sizes achieve their marketing goals with innovative solutions and strategic thinking.
+    <br><br>
+    <strong>E.Srikanth Reddy<br>MANAGING DIRECTOR</strong><br>
+    Under the visionary leadership of Mr. Enugu Srikanth Reddy, Prodbiz is driving its dual-brand strategy towards transformative growth in branding and sustainable agriculture. Focused on industry trends and innovation, Mr. Reddy is redefining benchmarks to ensure Prodbiz remains a leader in digital marketing and sustainable practices.
+  </p>
+</div>
+
+<style>
+
+/* SECTION BACKGROUND ONLY */
+#about-us {
+    width: 100%;
+    padding: 80px 0;
+    background-image:url('');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+/* Container ONLY for About Us */
+.about-container {
+    position: relative;
+    width: 600px;
+    padding: 30px;
+    background: #1D9EA3;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 2);
+}
+
+/* Circle image ONLY inside section */
+.about-circle {
+    width: 200px;
+    height: 200px;
+    background: url('images/srikanth 02.png');
+    border-radius: 50%;
+    background-size: cover;
+    float: left;
+    shape-outside: circle();
+    margin: 30px 30px 30px 0;
+}
+
+/* Text inside only */
+#about-us p {
+    margin: 0;
+    padding: 0;
+    line-height: 22px;
+    text-align: justify;
+}
+
+#about-us h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+}
+
+</style>
+
+</section>
+
+
+<section class="relative py-24 bg-[#0e0e14] overflow-hidden">
+  <!-- Neon Blobs -->
+  <div class="blob blob1"></div>
+  <div class="blob blob2"></div>
+
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+    <h2 class="text-center text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-wide">
+      Our <span class="text-orange-400">Mission</span> & <span class="text-cyan-400">Vision</span>
+    </h2>
+    <p class="text-center text-gray-400 max-w-2xl mx-auto mb-14">
+      We believe in innovation, commitment, and creating future-ready digital experiences.
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <!-- Mission Card -->
+      <div class="glass-card wow">
+        <h3 class="title">Our Mission</h3>
+        <p class="desc">
+          To empower businesses with digital transformation that accelerates growth,
+          drives innovation, and creates meaningful customer experiences.
+        </p>
+      </div>
+
+      <!-- Vision Card -->
+      <div class="glass-card wow">
+        <h3 class="title">Our Vision</h3>
+        <p class="desc">
+          To become a global leader in smart digital solutions, crafting products
+          that inspire trust, creativity, and technological excellence.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+/* Blobs Background */
+.blob {
+  position: absolute;
+  filter: blur(120px);
+  opacity: 0.4;
+}
+.blob1 {
+  width: 500px;
+  height: 500px;
+  background: #ff7a18;
+  top: -100px;
+  left: -100px;
+  animation: float1 7s infinite ease-in-out;
+}
+.blob2 {
+  width: 500px;
+  height: 500px;
+  background: #00eaff;
+  bottom: -120px;
+  right: -150px;
+  animation: float2 8s infinite ease-in-out;
+}
+
+/* Glass Cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  padding: 35px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 25px rgba(255,255,255,0.05),
+              0 0 45px rgba(255,120,20,0.1);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: .7s ease;
+}
+.glass-card:hover {
+  box-shadow: 0 0 35px rgba(255,255,255,0.15),
+              0 0 70px rgba(255,120,20,0.2);
+  transform: translateY(-5px) scale(1.02);
+}
+
+/* Text */
+.title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 12px;
+}
+.desc {
+  color: #cfcfcf;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* Card Reveal Animation */
+.wow.show {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+/* Blob animation */
+@keyframes float1 {
+  0%, 100% { transform: translate(0,0); }
+  50% { transform: translate(40px, -30px); }
+}
+@keyframes float2 {
+  0%, 100% { transform: translate(0,0); }
+  50% { transform: translate(-40px, 30px); }
+}
+</style>
+
+<script>
+// Scroll Reveal Animation
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("show");
+    }
+  });
+});
+
+document.querySelectorAll(".wow").forEach(el => observer.observe(el));
+</script>
+
+
+
+
+
+<section class="history-area animated-bg motion-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <p class="title-bg-small wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="300ms">
+          About us
+        </p>
+        <h3 class="section-title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="400ms">
+          Our <span>History</span>
+        </h3>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div id="history-slid" class="carousel slide glass shadow-glow" data-ride="carousel" data-interval="false">
+
+          <div class="carousel-inner">
+
+            <!-- ITEM -->
+            <div class="carousel-item row active">
+              <div class="col-lg-6 col-md-12 pl-0">
+                <div class="history-img">
+                  <img class="img-fluid" src="https://i.ibb.co/CKNmhMX/blog1.jpg" alt="">
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-12 pr-0">
+                <div class="history-content glass fade-up visible">
+                  <p class="title-bg-small primary-bg">Lorem ipsum</p>
+                  <h2 class="column-title">Lorem ipsum dolor <span>sit amet</span></h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  <p>Benefit of the socie where we operate.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- COPY YOUR OTHER carousel-item BLOCKS AS-IS (NO CHANGE) -->
+
+          </div>
+
+          <!-- INDICATORS -->
+          <ol class="carousel-indicators text-center">
+            <li data-target="#history-slid" data-slide-to="0" class="active">2000</li>
+            <li data-target="#history-slid" data-slide-to="1">2005</li>
+            <li data-target="#history-slid" data-slide-to="2">2010</li>
+            <li data-target="#history-slid" data-slide-to="3">2015</li>
+            <li data-target="#history-slid" data-slide-to="4">2020</li>
+            <li data-target="#history-slid" data-slide-to="5">2025</li>
+            <li data-target="#history-slid" data-slide-to="6">2030</li>
+            <li data-target="#history-slid" data-slide-to="7">2035</li>
+          </ol>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>* { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* GLASS + EFFECTS */
+.glass {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 10px 60px rgba(0,0,0,0.25);
+  backdrop-filter: blur(12px);
+}
+
+.shadow-glow {
+  box-shadow: 0 15px 60px #1D9EA3;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: all 700ms ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* BACKGROUND */
+.animated-bg {
+  background:
+    radial-gradient(circle at 20% 20%, #157e82, transparent 35%),
+    radial-gradient(circle at 80% 10%, rgba(4,56,64,0.22), transparent 30%),
+    radial-gradient(circle at 50% 80%, rgba(56,189,248,0.18), transparent 32%);
+  animation: float 18s ease-in-out infinite alternate;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-12px) scale(1.02); }
+  100% { transform: translateY(6px) scale(1); }
+}
+
+.motion-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(168,85,247,0.35),
+    rgba(14,165,233,0.28),
+    rgba(34,211,238,0.32),
+    rgba(16,185,129,0.24)
+  );
+  background-size: 180% 180%;
+  animation: gradientShift 16s ease-in-out infinite;
+  filter: blur(50px);
+  opacity: 0.85;
+  z-index: 0;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+/* HISTORY AREA */
+.history-area {
+  position: relative;
+  padding: 120px 0;
+  min-height: 100vh;
+  color: #fff;
+  overflow: hidden;
+}
+
+.history-area .container {
+  position: relative;
+  z-index: 2;
+}
+
+.section-title,
+.column-title {
+  color: #fff;
+}
+
+#history-slid .history-content {
+  padding: 35px;
+  color: #e5e7eb;
+}
+
+#history-slid .carousel-item {
+  display: flex;
+}
+
+#history-slid .carousel-indicators li {
+  color: #cbd5f5;
+}
+
+#history-slid .carousel-indicators li.active {
+  color: #22d3ee;
+  background: rgba(255,255,255,0.12);
+}
+
+#history-slid .carousel-indicators li.active::before {
+  background: #22d3ee;
+}
+</style>
