@@ -232,69 +232,135 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
 <!--nav end-->
+<!-- NAVIGATION -->
 
 
-<section id="gallery" class="relative w-full py-20 flex flex-col justify-center items-center bg-slate-900">
-  <!-- Section Heading -->
-  <h2 class="text-4xl font-bold text-white mb-8">Our Gallery</h2>
-<br>
-<br>
-<br>
-  <!-- Gallery Container -->
-  <div class="gallery">
-      <span style="--i:1"><img src="https://i.ibb.co/sm8mdMP/pic16.jpg" alt="Gallery Image 1"></span>
-      <span style="--i:2"><img src="https://i.ibb.co/Gnq2gJb/pic2.jpg" alt="Gallery Image 2"></span>
-      <span style="--i:3"><img src="https://i.ibb.co/vDpCDSY/pic13.jpg" alt="Gallery Image 3"></span>
-      <span style="--i:4"><img src="https://i.ibb.co/f0Yt9bM/pic4.jpg" alt="Gallery Image 4"></span>
-      <span style="--i:5"><img src="https://i.ibb.co/g4hxBfz/pic5.jpg" alt="Gallery Image 5"></span>
-      <span style="--i:6"><img src="https://i.ibb.co/FgdgX20/pic10.jpg" alt="Gallery Image 6"></span>
-      <span style="--i:7"><img src="https://i.ibb.co/kDjJwhB/pic7.jpg" alt="Gallery Image 7"></span>
-      <span style="--i:8"><img src="https://i.ibb.co/9n7mHQt/pic8.jpg" alt="Gallery Image 8"></span>
+<!-- BLOG SECTION -->
+<section class="container blog-section">
+  <div class="blog-header-block">
+    <h2>Latest Blog Posts</h2>
+    <a href="#" class="view-all-link">View All Blogs &rarr;</a>
   </div>
 
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+  <div class="blog-layout-grid">
+    <!-- Featured Blog 1 -->
+    <div class="blog-item large-item reversed-item">
+      <div class="blog-image-container">
+        <img src="https://placehold.co/600x400/ff6f61/ffffff?text=Blog+1" alt="Blog 1 Image">
+      </div>
+      <div class="blog-content">
+        <span class="blog-badge tech-badge">Technology</span>
+        <h3>How AI is Changing the Future of Work</h3>
+        <p>Explore how artificial intelligence is transforming industries, enhancing productivity, and creating new opportunities.</p>
+        <a class="btn" href="#">Read More &rarr;</a>
+      </div>
+    </div>
 
-    .gallery { 
-      position: relative; 
-      width: 300px; 
-      height: 200px; 
-      transform-style: preserve-3d; 
-      animation: animate 30s linear infinite; 
-      animation-play-state: running; 
-    }
+    <!-- Featured Blog 2 -->
+    <div class="blog-item large-item">
+      <div class="blog-image-container">
+        <img src="images/business-concept-with-team-close-up.jpg" alt="Blog 2 Image">
+      </div>
+      <div class="blog-content">
+        <span class="blog-badge design-badge">Design</span>
+        <h3>Minimalism in Modern Web Design</h3>
+        <p>Learn the principles of minimalism and how clean design can improve user experience and engagement.</p>
+        <a class="btn" href="#">Read More &rarr;</a>
+      </div>
+    </div>
 
-    .gallery:hover { 
-      animation-play-state: paused; 
-    }
+    <!-- Smaller Blogs -->
+    <div class="blog-item small-item">
+      <div class="blog-image-container">
+        <img src="https://placehold.co/400x300/f7cac9/ffffff?text=Blog+3" alt="Blog 3 Image">
+      </div>
+      <div class="blog-content">
+        <span class="blog-badge marketing-badge">Marketing</span>
+        <h3>SEO Tips for 2026</h3>
+      </div>
+    </div>
 
-    @keyframes animate {
-      0% { transform: perspective(1000px) rotateY(0deg); }
-      100% { transform: perspective(1000px) rotateY(360deg); }
-    }
+    <div class="blog-item small-item">
+      <div class="blog-image-container">
+        <img src="https://placehold.co/400x300/92a8d1/ffffff?text=Blog+4" alt="Blog 4 Image">
+      </div>
+      <div class="blog-content">
+        <span class="blog-badge social-badge">Social Media</span>
+        <h3>Instagram Trends for Brands</h3>
+      </div>
+    </div>
 
-    .gallery span { 
-      position: absolute; 
-      top: 0; 
-      left: 0; 
-      width: 100%; 
-      height: 100%; 
-      transform-origin: center; 
-      transform-style: preserve-3d; 
-      transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px); 
-      -webkit-box-reflect: below 0px linear-gradient(transparent, transparent, #0004); 
-    }
-
-    .gallery span img { 
-      position: absolute; 
-      top: 0; 
-      left: 0; 
-      width: 100%; 
-      height: 100%; 
-      border-radius: 10px; 
-      object-fit: cover; 
-      cursor: pointer; 
-    }
-  </style>
+    <div class="blog-item small-item">
+      <div class="blog-image-container">
+        <img src="https://placehold.co/400x300/f7cac9/ffffff?text=Blog+5" alt="Blog 5 Image">
+      </div>
+      <div class="blog-content">
+        <span class="blog-badge strategy-badge">Strategy</span>
+        <h3>Building a Content Calendar</h3>
+      </div>
+    </div>
+  </div>
 </section>
+
+<style>
+/* NAVIGATION */
+.main-nav { width: 100%; background: #111; padding: 1rem 0; position: sticky; top: 0; z-index: 100; }
+.nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+.logo { font-size: 1.5rem; font-weight: 700; color: #e31642; }
+.nav-links { list-style: none; display: flex; gap: 2rem; }
+.nav-links li a { color: #fff; font-weight: 500; transition: color 0.3s ease; }
+.nav-links li a:hover { color: #e31642; }
+
+/* BLOG SECTION (same as previous code) */
+:root {
+  --primary-bg-color: #0f0f0f;
+  --text-color-primary: #e31642;
+  --text-color-secondary: #acacac;
+  --accent-color: #ba0505;
+  --font-family-main: "Rethink Sans", sans-serif;
+  --container-width: 1200px;
+  --border-radius-md: 16px;
+  --border-radius-full: 9999px;
+}
+.container { width: 100%; max-width: var(--container-width); margin: 0 auto; padding: 2rem 1rem; }
+a { text-decoration: none; color: inherit; }
+.btn { display: inline-block; margin-top: 1rem; font-weight: 500; }
+
+.blog-header-block { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; }
+.blog-header-block h2 { font-size: 2.75rem; font-weight: 600; max-width: 450px; line-height: 1.3; }
+.view-all-link { color: var(--text-color-primary); font-weight: 600; }
+
+.blog-layout-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 1.5rem; }
+.blog-item .blog-image-container { overflow: hidden; border-radius: var(--border-radius-md); }
+.blog-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.blog-item:hover img { transform: scale(1.05); }
+.blog-content { padding: 1.5rem 0.5rem; background-color: var(--primary-bg-color); }
+.large-item { grid-column: span 3; display: flex; flex-direction: column; }
+.large-item .blog-image-container { height: 280px; }
+.large-item.reversed-item { flex-direction: row; }
+.large-item.reversed-item .blog-content { order: 1; width: 55%; padding: 2rem; }
+.large-item.reversed-item .blog-image-container { order: 2; width: 45%; height: 100%; }
+.large-item h3 { font-size: 1.75rem; font-weight: 600; margin: 0.75rem 0; line-height: 1.3; }
+.large-item p { color: var(--text-color-secondary); line-height: 1.6; }
+.small-item { grid-column: span 2; }
+.small-item .blog-image-container { height: 200px; }
+.small-item h3 { font-size: 1.25rem; font-weight: 600; margin-top: 0.75rem; line-height: 1.4; }
+.blog-badge { display: inline-block; padding: 0.25rem 0.75rem; border-radius: var(--border-radius-full); font-size: 0.875rem; font-weight: 500; color: #1f2937; background-color: #e0f2fe; }
+
+/* RESPONSIVE */
+@media(max-width:992px) {
+  .large-item, .small-item { grid-column: span 6; }
+  .reversed-item { flex-direction: column; }
+  .reversed-item .blog-content, .reversed-item .blog-image-container { width: 100%; order: initial; }
+  .reversed-item .blog-image-container { height: 250px; border-radius: var(--border-radius-md) var(--border-radius-md) 0 0; }
+  .reversed-item .blog-content { padding: 1.5rem; }
+}
+@media(max-width:768px) {
+  .blog-header-block { flex-direction: column; align-items: flex-start; gap:1.5rem; }
+  .blog-header-block h2 { font-size:2.25rem; }
+  .large-item h3 { font-size:1.5rem; }
+  .small-item h3 { font-size:1.125rem; }
+  .nav-links { gap:1rem; flex-wrap:wrap; }
+}
+</style>
 

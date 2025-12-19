@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prodbiz Solutions | Digital Innovation Studio</title>
+  <meta name="description" content="Prodbiz Solutions builds high-impact digital products, automation, and cloud experiences." />
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</head>
+
+
+<body class="bg-slate-950 text-slate-50">
+  <div class="relative overflow-visible">
+    <div class="pointer-events-none absolute inset-0 animated-bg blur-2xl opacity-70"></div>
+
+    <header class="sticky top-0 z-40 bg-transparent backdrop-blur">
+    <div class="relative mx-auto flex max-w-6xl items-center justify-between px-4 md:px-6 py-4 md:py-6 rounded-b-2xl">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="images/prodbizlogo.png" alt="Prodbiz Logo" class="h-12 md:h-12 w-auto object-contain">
+      </a>
+      <button id="mobileToggle" class="md:hidden flex flex-col gap-1.5 rounded-lg bg-white/10 px-3 py-2 ring-1 ring-white/15 text-white">
+      <span class="block h-0.5 w-6 bg-white"></span>
+      <span class="block h-0.5 w-6 bg-white"></span>
+      <span class="block h-0.5 w-6 bg-white"></span>
+    </button>
+    <nav id="mainNav" class="glass absolute left-4 right-4 top-full mt-2 z-30 hidden flex flex-col items-start gap-2 px-4 py-4 text-sm font-medium text-slate-100 bg-slate-950/95 rounded-2xl md:bg-transparent md:backdrop-blur-none md:static md:mt-0 md:flex md:flex-row md:items-center md:gap-6 md:rounded-full md:px-4 md:py-2">
+      <a class="block w-full text-left rounded-xl bg-white/5 px-3 py-2 ring-1 ring-white/10 hover:bg-white/10 md:w-auto md:bg-transparent md:ring-0 md:px-2 md:py-1" href="index.html">Home</a>
+      <a class="block w-full text-left rounded-xl bg-white/5 px-3 py-2 ring-1 ring-white/10 hover:bg-white/10 md:w-auto md:bg-transparent md:ring-0 md:px-2 md:py-1" href="gallery.html">About Us</a>
+      <div class="relative nav-dropdown w-full md:w-auto" data-dropdown="services">
+        <button class="flex w-full items-center justify-between gap-1 rounded-xl bg-white/5 px-3 py-2 text-left ring-1 ring-white/10 hover:bg-white/10 md:w-auto md:justify-start md:bg-transparent md:ring-0 md:px-2 md:py-1">Our Services <span class="md:hidden">▾</span></button>
+        <div class="dropdown-panel hidden md:absolute left-0 mt-2 w-full md:w-auto min-w-[200px] rounded-xl bg-cyan-600/20 text-slate-900 shadow-lg backdrop-blur z-30">
+<a href="#services"
+   class="block px-4 py-3 mb-2 rounded-xl 
+          bg-gradient-to-br from-orange-200/40 to-orange-400/40 
+          backdrop-blur-md border border-white/20 
+          text-white font-semibold 
+          hover:from-orange-200/60 hover:to-orange-400/60
+          transition-all duration-300">
+  IT Services
+</a>
+
+<a href="services.html"
+   class="block px-4 py-3 rounded-xl 
+          bg-gradient-to-br from-orange-200/40 to-orange-400/40 
+          backdrop-blur-md border border-white/20 
+          text-white font-semibold 
+          hover:from-orange-200/60 hover:to-orange-400/60
+          transition-all duration-300">
+  Digital Marketing
+</a>
+
+
+
+
+        </div>
+      </div>
+<div class="relative nav-dropdown w-full md:w-auto" data-dropdown="family">
+  <button class="flex w-full items-center justify-between gap-1 rounded-xl 
+                 bg-white/5 px-3 py-2 text-left ring-1 ring-white/10 
+                 hover:bg-white/10 md:w-auto md:justify-start md:bg-transparent 
+                 md:ring-0 md:px-2 md:py-1">
+    Our Family <span class="md:hidden">▾</span>
+  </button>
+
+  <div class="dropdown-panel hidden md:absolute left-0 mt-2 w-full md:w-auto 
+              min-w-[210px] rounded-xl bg-white/5 backdrop-blur-md 
+              border border-white/20 text-white shadow-lg z-30">
+    <a href="https://trinifarms.com" target="_blank"
+       class="block px-4 py-3 mb-2 rounded-xl 
+              bg-orange-300/50 backdrop-blur-md 
+              border border-white/20 
+              text-white font-semibold 
+              hover:bg-orange-400/60 
+              transition-all duration-300">
+      Trini Farms
+    </a>
+
+    <a href="#"
+       class="block px-4 py-3 rounded-xl 
+              bg-orange-300/50 backdrop-blur-md 
+              border border-white/20 
+              text-white font-semibold 
+              hover:bg-orange-400/60 
+              transition-all duration-300">
+      The Viral Vibe
+    </a>
+  </div>
+</div><a class="block w-full text-left rounded-xl bg-white/5 px-3 py-2 ring-1 ring-white/10 hover:bg-white/10 md:w-auto md:bg-transparent md:ring-0 md:px-2 md:py-1" href="#work">Blog</a>
+        <a class="block w-full text-left rounded-xl bg-white/5 px-3 py-2 ring-1 ring-white/10 hover:bg-white/10 md:w-auto md:bg-transparent md:ring-0 md:px-2 md:py-1" href="#gallery">Gallery</a>
+        <a class="block w-full text-center rounded-xl bg-white/10 px-3 py-2 text-white ring-1 ring-white/15 hover:bg-white/20 md:w-auto md:px-4 md:py-2" href="contact.html">Contact us</a>
+      </nav>
+      </div>
+    </header>
+ <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    const nav = document.getElementById('mainNav');
+    const toggle = document.getElementById('mobileToggle');
+    const dropdowns = document.querySelectorAll('.nav-dropdown');
+
+    const closeAllDropdowns = () => {
+      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.add('hidden'));
+    };
+
+    toggle?.addEventListener('click', () => {
+      nav.classList.toggle('hidden');
+    });
+
+    nav?.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 768) nav.classList.add('hidden');
+        closeAllDropdowns();
+      });
+    });
+
+    dropdowns.forEach(drop => {
+      const button = drop.querySelector('button');
+      const panel = drop.querySelector('.dropdown-panel');
+      if (!button || !panel) return;
+
+      // Hover open on desktop; also close others
+      drop.addEventListener('mouseenter', () => {
+        if (window.innerWidth >= 768) {
+          closeAllDropdowns();
+          panel.classList.remove('hidden');
+        }
+      });
+
+      // Click toggle for desktop and mobile; stays open until outside click or new toggle
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const willOpen = panel.classList.contains('hidden');
+        closeAllDropdowns();
+        if (willOpen) panel.classList.remove('hidden');
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      const insideDropdown = e.target.closest('.nav-dropdown');
+      const insideNav = e.target.closest('#mainNav');
+      if (!insideDropdown && !insideNav) closeAllDropdowns();
+    });
+
+    // Gallery scripts
+    const audio = document.getElementById("background-music");
+    const playPauseButton = document.getElementById("play-pause-button");
+    const playIcon = document.getElementById("play-music");
+    const pauseIcon = document.getElementById("pause-music");
+    let isPlaying = false;
+
+    function togglePlayPause() {
+      if (isPlaying) {
+        audio.pause();
+        playIcon.classList.remove("hidden");
+        pauseIcon.classList.add("hidden");
+      } else {
+        audio.play();
+        playIcon.classList.add("hidden");
+        pauseIcon.classList.remove("hidden");
+      }
+      isPlaying = !isPlaying;
+    }
+
+    playPauseButton?.addEventListener("click", togglePlayPause);
+    audio?.addEventListener("ended", () => {
+      audio.currentTime = 0;
+      audio.play();
+    });
+
+    // Initialize Swiper
+    const swiper = new Swiper(".swiper", {
+      grabCursor: true,
+      initialSlide: 4,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      spaceBetween: 12,
+      speed: 900,
+      freeMode: false,
+      mousewheel: { thresholdDelta: 30 },
+      pagination: { el: ".swiper-pagination" },
+      on: {
+        click(event) {
+          swiper.slideTo(this.clickedIndex);
+        },
+      },
+    });
+
+    // Particles
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 160, density: { enable: true, value_area: 800 } },
+        color: { value: "#fff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.3 },
+        size: { value: 4, random: true, anim: { enable: true, speed: 2, size_min: 0.1 } },
+        line_linked: { enable: false },
+        move: { enable: true, speed: 0.45, direction: "right", random: true, straight: false, out_mode: "none" },
+      },
+      retina_detect: true,
+    });
+
+    // Hero particles - light molecule style
+    particlesJS("hero-particles", {
+      particles: {
+        number: { value: 100, density: { enable: true, value_area: 900 } },
+        color: { value: "#e0f2fe" },
+        shape: { type: "circle" },
+        opacity: { value: 0.35 },
+        size: { value: 2.6, random: true, anim: { enable: true, speed: 1.8, size_min: 0.6 } },
+        line_linked: { enable: false },
+        move: { enable: true, speed: 0.5, direction: "none", random: true, straight: false, out_mode: "out" },
+      },
+      retina_detect: true,
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!--nav end-->
+<section class="wrapper">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:"Inter",sans-serif;
+  background:#f5f5f5;
+  color:#111;
+}
+
+.wrapper{
+  display:flex;
+  justify-content:center;
+  padding:60px 16px;
+}
+
+.section{
+  max-width:1200px;
+  width:100%;
+  text-align:center;
+}
+
+.section-title{
+  font-size:2rem;
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+.section-desc{
+  color:#555;
+  margin-bottom:40px;
+}
+
+/* GRID */
+.cards-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+/* CARD */
+.card-wrapper{
+  position:relative;
+}
+
+.card{
+  --r:30px;
+  --s:40px;
+  position:relative;
+  padding:24px;
+  background:#5f558a;
+  border-radius:30px;
+  overflow:hidden;
+  text-align:left;
+  transition:color .4s ease;
+  clip-path:shape(
+    from 0 0,
+    hline to calc(100% - var(--s) - 2 * var(--r)),
+    arc by var(--r) var(--r) of var(--r) cw,
+    arc by var(--s) var(--s) of var(--s),
+    arc by var(--r) var(--r) of var(--r) cw,
+    vline to 100%,
+    hline to 0
+  );
+}
+
+/* HOVER COLOR LAYER */
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,#2563eb,#1e40af);
+  transform:translateY(100%);
+  transition:transform .5s ease;
+  z-index:0;
+}
+
+.card:hover::before{
+  transform:translateY(0);
+}
+
+/* CONTENT */
+.card *{
+  position:relative;
+  z-index:1;
+}
+
+.card:hover{
+  color:#fff;
+}
+
+.card-circle{
+  width:56px;
+  height:56px;
+  background:#fc951f;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+  font-size:1.2rem;
+  position:absolute;
+  top:0;
+  right:0;
+  z-index:2;
+}
+
+.card-title{
+  font-size:1.2rem;
+  font-weight:700;
+  margin-bottom:10px;
+  padding-right:70px;
+}
+
+.card-desc{
+  font-size:.9rem;
+  line-height:1.6;
+  margin-bottom:14px;
+  padding-right:65px;
+}
+
+.card-img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+  border-radius:18px;
+}
+
+/* RESPONSIVE */
+@media(max-width:992px){
+  .cards-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  .cards-grid{grid-template-columns:1fr}
+}
+</style>
+
+<div class="section">
+  <h2 class="section-title">Our Digital Services</h2>
+  <p class="section-desc">Powerful strategies crafted for digital success.</p>
+
+  <div class="cards-grid">
+
+    <!-- CARD 1 -->
+    <article class="card-wrapper">
+      <div class="card-circle">1</div>
+      <div class="card">
+        <h3 class="card-title">Digital Marketing</h3>
+        <p class="card-desc">
+          SEO, PPC, and social strategies that boost visibility, traffic, and brand engagement.
+        </p>
+        <img class="card-img" src="https://picsum.photos/500/300?1">
+      </div>
+    </article>
+
+    <!-- CARD 2 -->
+    <article class="card-wrapper">
+      <div class="card-circle">2</div>
+      <div class="card">
+        <h3 class="card-title">SEO</h3>
+        <p class="card-desc">
+          Improve search rankings with keyword optimization and quality backlinks.
+        </p>
+        <img class="card-img" src="https://picsum.photos/500/300?2">
+      </div>
+    </article>
+
+    <!-- CARD 3 -->
+    <article class="card-wrapper">
+      <div class="card-circle">3</div>
+      <div class="card">
+        <h3 class="card-title">PPC Campaigns</h3>
+        <p class="card-desc">
+          Targeted ads that deliver instant visibility and measurable conversions.
+        </p>
+        <img class="card-img" src="https://picsum.photos/500/300?3">
+      </div>
+    </article>
+
+    <!-- CARD 4 -->
+    <article class="card-wrapper">
+      <div class="card-circle">4</div>
+      <div class="card">
+        <h3 class="card-title">Social Media Marketing</h3>
+        <p class="card-desc">
+          Build communities and brand trust across all major social platforms.
+        </p>
+        <img class="card-img" src="https://picsum.photos/500/300?4">
+      </div>
+    </article>
+
+    <!-- CARD 5 -->
+    <article class="card-wrapper">
+      <div class="card-circle">5</div>
+      <div class="card">
+        <h3 class="card-title">Content Marketing</h3>
+        <p class="card-desc">
+          High-quality content that educates, engages, and converts audiences.
+        </p>
+        <img class="card-img" src="https://picsum.photos/500/300?5">
+      </div>
+    </article>
+
+    <!-- CARD 6 -->
+    <article class="card-wrapper">
+      <div class="card-circle">6</div>
+      <div class="card">
+        <h3 class="card-title">Influencer Marketing</h3>
+        <p class="card-desc">
+          Partner with influencers to expand reach and build trust.
+        </p>
+        <img class="card-img" src="https://picsum.photos/500/300?6">
+      </div>
+    </article>
+
+  </div>
+</div>
+
+</section>
+  <!--footer-->
+<section class="footer-section">
+
+  <!-- Footer Content -->
+  <div class="footer-content">
+
+    <!-- Column 1: Logo + About -->
+    <div class="footer-col">
+      <img src="https://via.placeholder.com/160x50?text=LOGO" class="footer-logo" alt="Logo">
+      <p>
+        Providing reliable digital solutions to grow your business with modern technology and design.
+      </p>
+    </div>
+
+    <!-- Column 2: Useful Links -->
+    <div class="footer-col">
+      <h4>Useful Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Our Team</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Address -->
+    <div class="footer-col">
+      <h4>Our Address</h4>
+      <p>
+        123, Tech Park Road,<br>
+        Hyderabad, Telangana<br>
+        India – 500081
+      </p>
+      <p>Email: info@prodbsolutions.com</p>
+      <p>Phone: +91 98765 43210</p>
+    </div>
+
+    <!-- Column 4: Social Media -->
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="footer-bottom">
+    <p>
+      © 2025 ProDBSolutions |
+      Designed & Developed by
+      <a href="https://prodbsolutions.com" target="_blank">ProDBSolutions.com</a>
+    </p>
+  </div>
+
+</section>
+
+<!-- Icons -->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<style>
+/* FOOTER SECTION */
+.footer-section {
+  background: #008080; /* Teal Blue */
+  color: #ffffff;
+  padding: 60px 50px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* CONTENT GRID */
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* COLUMN */
+.footer-col {
+  flex: 1 1 220px;
+  margin: 20px;
+}
+
+.footer-col h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+/* LOGO */
+.footer-logo {
+  width: 160px;
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+.footer-col p {
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* LINKS */
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #dcdcdc;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+}
+
+/* SOCIAL ICONS */
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  font-size: 1.6rem;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00ffff;
+}
+
+/* BOTTOM BAR */
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  text-align: center;
+}
+
+.footer-bottom a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-col {
+    margin: 15px 0;
+  }
+}
+</style>

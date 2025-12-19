@@ -3,149 +3,495 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | Prodbiz Solutions</title>
+  <title>Prodbiz Solutions | Digital Innovation Studio</title>
+  <meta name="description" content="Prodbiz Solutions builds high-impact digital products, automation, and cloud experiences." />
+  <link rel="stylesheet" href="style.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    * { scroll-behavior: smooth; }
-    body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
-    .glass { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 10px 60px rgba(0,0,0,0.25); }
-  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
 </head>
+
+
 <body class="bg-slate-950 text-slate-50">
-  <div class="pointer-events-none absolute inset-0">
-    <div class="absolute -top-40 -right-32 h-96 w-96 rounded-full bg-purple-500/20 blur-3xl"></div>
-    <div class="absolute top-20 -left-10 h-96 w-96 rounded-full bg-cyan-500/20 blur-3xl"></div>
-  </div>
+  <div class="relative overflow-visible">
+    <div class="pointer-events-none absolute inset-0 animated-bg blur-2xl opacity-70"></div>
 
-  <header class="relative z-10 mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-    <a href="index.html" class="flex items-center gap-3">
-      <div class="flex h-12 w-28 items-center justify-center rounded-xl bg-white/10 ring-1 ring-white/15 text-sm font-semibold text-white backdrop-blur">Prodbiz</div>
+    <header class="sticky top-0 z-40 bg-transparent backdrop-blur">
+    <div class="relative mx-auto flex max-w-6xl items-center justify-between px-4 md:px-6 py-4 md:py-6 rounded-b-2xl">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="images/prodbizlogo.png" alt="Prodbiz Logo" class="h-12 md:h-12 w-auto object-contain">
+      </a>
+      <button id="mobileToggle" class="md:hidden flex flex-col gap-1.5 rounded-lg bg-white/10 px-3 py-2 ring-1 ring-white/15 text-white">
+      <span class="block h-0.5 w-6 bg-white"></span>
+      <span class="block h-0.5 w-6 bg-white"></span>
+      <span class="block h-0.5 w-6 bg-white"></span>
+    </button>
+    <nav id="mainNav" class="glass absolute left-4 right-4 top-full mt-2 z-30 hidden flex flex-col items-start gap-2 px-4 py-4 text-sm font-medium text-slate-100 bg-slate-950/95 rounded-2xl md:bg-transparent md:backdrop-blur-none md:static md:mt-0 md:flex md:flex-row md:items-center md:gap-6 md:rounded-full md:px-4 md:py-2">
+      <a class="block w-full text-left rounded-xl bg-white/5 px-3 py-2 ring-1 ring-white/10 hover:bg-white/10 md:w-auto md:bg-transparent md:ring-0 md:px-2 md:py-1" href="index.html">Home</a>
+      <a class="block w-full text-left rounded-xl bg-white/5 px-3 py-2 ring-1 ring-white/10 hover:bg-white/10 md:w-auto md:bg-transparent md:ring-0 md:px-2 md:py-1" href="gallery.html">About Us</a>
+      <div class="relative nav-dropdown w-full md:w-auto" data-dropdown="services">
+        <button class="flex w-full items-center justify-between gap-1 rounded-xl bg-white/5 px-3 py-2 text-left ring-1 ring-white/10 hover:bg-white/10 md:w-auto md:justify-start md:bg-transparent md:ring-0 md:px-2 md:py-1">Our Services <span class="md:hidden">▾</span></button>
+        <div class="dropdown-panel hidden md:absolute left-0 mt-2 w-full md:w-auto min-w-[200px] rounded-xl bg-cyan-600/20 text-slate-900 shadow-lg backdrop-blur z-30">
+<a href="#services"
+   class="block px-4 py-3 mb-2 rounded-xl 
+          bg-gradient-to-br from-orange-200/40 to-orange-400/40 
+          backdrop-blur-md border border-white/20 
+          text-white font-semibold 
+          hover:from-orange-200/60 hover:to-orange-400/60
+          transition-all duration-300">
+  IT Services
+</a>
+
+<a href="services.html"
+   class="block px-4 py-3 rounded-xl 
+          bg-gradient-to-br from-orange-200/40 to-orange-400/40 
+          backdrop-blur-md border border-white/20 
+          text-white font-semibold 
+          hover:from-orange-200/60 hover:to-orange-400/60
+          transition-all duration-300">
+  Digital Marketing
+</a>
+
+
+
+
+        </div>
+      </div>
+<div class="relative nav-dropdown w-full md:w-auto" data-dropdown="family">
+  <button class="flex w-full items-center justify-between gap-1 rounded-xl 
+                 bg-white/5 px-3 py-2 text-left ring-1 ring-white/10 
+                 hover:bg-white/10 md:w-auto md:justify-start md:bg-transparent 
+                 md:ring-0 md:px-2 md:py-1">
+    Our Family <span class="md:hidden">▾</span>
+  </button>
+
+  <div class="dropdown-panel hidden md:absolute left-0 mt-2 w-full md:w-auto 
+              min-w-[210px] rounded-xl bg-white/5 backdrop-blur-md 
+              border border-white/20 text-white shadow-lg z-30">
+    <a href="https://trinifarms.com" target="_blank"
+       class="block px-4 py-3 mb-2 rounded-xl 
+              bg-orange-300/50 backdrop-blur-md 
+              border border-white/20 
+              text-white font-semibold 
+              hover:bg-orange-400/60 
+              transition-all duration-300">
+      Trini Farms
     </a>
-    <nav class="hidden items-center gap-6 text-sm font-medium text-slate-100 md:flex glass rounded-full px-4 py-2">
-      <a class="hover:text-white px-2 py-1" href="index.html">Home</a>
-      <a class="hover:text-white px-2 py-1" href="about.html">About Us</a>
-      <div class="relative group">
-        <button class="px-2 py-1 hover:text-white">Our Services</button>
-        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 absolute left-0 mt-2 min-w-[180px] rounded-xl bg-[#f0e7da]/95 text-slate-900 shadow-lg backdrop-blur">
-          <a class="block px-4 py-3 hover:bg-white/70" href="services.html#it">IT Services</a>
-          <a class="block px-4 py-3 hover:bg-white/70" href="services.html#marketing">Digital Marketing</a>
-        </div>
-      </div>
-      <div class="relative group">
-        <button class="px-2 py-1 hover:text-white">Our Family</button>
-        <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200 absolute left-0 mt-2 min-w-[200px] rounded-xl bg-[#f0e7da]/95 text-slate-900 shadow-lg backdrop-blur">
-          <a class="block px-4 py-3 hover:bg-white/70" href="https://trinifarms.com" target="_blank">Trini Farms</a>
-          <a class="block px-4 py-3 hover:bg-white/70" href="#">The Viral Vibe</a>
-        </div>
-      </div>
-      <a class="hover:text-white px-2 py-1" href="index.html#work">Blog</a>
-      <a class="hover:text-white px-2 py-1" href="index.html#work">Gallery</a>
-      <a class="rounded-full bg-white/10 px-4 py-2 text-white ring-1 ring-white/15 hover:bg-white/20" href="contact.html">Contact us</a>
-    </nav>
-  </header>
 
-  <main class="relative z-10 mx-auto max-w-6xl px-6 pb-16">
-    <section class="space-y-4">
-      <p class="text-sm uppercase tracking-[0.2em] text-purple-200">About us</p>
-      <h1 class="text-4xl font-bold leading-tight text-white">We are builders obsessed with outcomes.</h1>
-      <p class="max-w-3xl text-lg text-slate-300">Prodbiz Solutions is a distributed team of product strategists, designers, engineers, and data specialists partnering with growth-minded teams to launch and scale digital products.</p>
-    </section>
+    <a href="#"
+       class="block px-4 py-3 rounded-xl 
+              bg-orange-300/50 backdrop-blur-md 
+              border border-white/20 
+              text-white font-semibold 
+              hover:bg-orange-400/60 
+              transition-all duration-300">
+      The Viral Vibe
+    </a>
+  </div>
+</div><a class="block w-full text-left rounded-xl bg-white/5 px-3 py-2 ring-1 ring-white/10 hover:bg-white/10 md:w-auto md:bg-transparent md:ring-0 md:px-2 md:py-1" href="#work">Blog</a>
+        <a class="block w-full text-left rounded-xl bg-white/5 px-3 py-2 ring-1 ring-white/10 hover:bg-white/10 md:w-auto md:bg-transparent md:ring-0 md:px-2 md:py-1" href="#gallery">Gallery</a>
+        <a class="block w-full text-center rounded-xl bg-white/10 px-3 py-2 text-white ring-1 ring-white/15 hover:bg-white/20 md:w-auto md:px-4 md:py-2" href="contact.html">Contact us</a>
+      </nav>
+      </div>
+    </header>
+ <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
 
-    <section class="mt-12 grid gap-6 md:grid-cols-3">
-      <div class="glass rounded-2xl p-6">
-        <p class="text-2xl font-semibold text-white">2016</p>
-        <p class="mt-2 text-slate-300">Founded with a mission to pair strategy with execution.</p>
-      </div>
-      <div class="glass rounded-2xl p-6">
-        <p class="text-2xl font-semibold text-white">6 countries</p>
-        <p class="mt-2 text-slate-300">Distributed teams who work in your time zone.</p>
-      </div>
-      <div class="glass rounded-2xl p-6">
-        <p class="text-2xl font-semibold text-white">120+ launches</p>
-        <p class="mt-2 text-slate-300">From MVPs to enterprise platforms.</p>
-      </div>
-    </section>
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
-    <section class="mt-12 grid gap-10 md:grid-cols-[1.1fr_0.9fr] md:items-center">
-      <div class="space-y-4">
-        <h2 class="text-3xl font-semibold text-white">Our principles</h2>
-        <ul class="space-y-3 text-slate-200">
-          <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-gradient-to-r from-purple-500 to-cyan-400"></span><span>Outcomes over output — we align on measurable impact.</span></li>
-          <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-gradient-to-r from-purple-500 to-cyan-400"></span><span>Design with data — insights from research, analytics, and experiments.</span></li>
-          <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-gradient-to-r from-purple-500 to-cyan-400"></span><span>Ship weekly — demos, feedback, and iteration are our default.</span></li>
-          <li class="flex items-start gap-3"><span class="mt-1 h-2 w-2 rounded-full bg-gradient-to-r from-purple-500 to-cyan-400"></span><span>Secure and observable by design — quality gates baked in.</span></li>
-        </ul>
-      </div>
-      <div class="glass rounded-2xl p-8">
-        <p class="text-sm text-slate-300">Leadership</p>
-        <div class="mt-6 grid gap-4 md:grid-cols-2">
-          <div class="rounded-xl bg-white/5 p-4">
-            <p class="text-lg font-semibold text-white">Ariana Lewis</p>
-            <p class="text-sm text-slate-300">Founder & Product</p>
-            <p class="mt-2 text-sm text-slate-400">Built and scaled multiple SaaS products to acquisition.</p>
-          </div>
-          <div class="rounded-xl bg-white/5 p-4">
-            <p class="text-lg font-semibold text-white">Kofi Mensah</p>
-            <p class="text-sm text-slate-300">Engineering</p>
-            <p class="mt-2 text-sm text-slate-400">Cloud, data, and platform engineering leader.</p>
-          </div>
-          <div class="rounded-xl bg-white/5 p-4">
-            <p class="text-lg font-semibold text-white">Mei Tan</p>
-            <p class="text-sm text-slate-300">Design</p>
-            <p class="mt-2 text-sm text-slate-400">Design systems and product storytelling expert.</p>
-          </div>
-          <div class="rounded-xl bg-white/5 p-4">
-            <p class="text-lg font-semibold text-white">Luis Ortega</p>
-            <p class="text-sm text-slate-300">Delivery</p>
-            <p class="mt-2 text-sm text-slate-400">Scaled agile practices for distributed teams.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+    const nav = document.getElementById('mainNav');
+    const toggle = document.getElementById('mobileToggle');
+    const dropdowns = document.querySelectorAll('.nav-dropdown');
 
-    <section class="mt-12 glass rounded-3xl p-8">
-      <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-        <div>
-          <p class="text-sm uppercase tracking-[0.2em] text-cyan-200">How we work</p>
-          <h2 class="mt-2 text-2xl font-semibold text-white">Embedded, transparent, and fast</h2>
-          <p class="mt-2 max-w-3xl text-slate-300">We join your rituals, share progress weekly, and stay accountable to the metrics that matter to you.</p>
-        </div>
-        <a class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 shadow-lg shadow-purple-500/30 hover:shadow-purple-400/50" href="contact.html">Let’s talk</a>
-      </div>
-      <div class="mt-6 grid gap-4 md:grid-cols-3">
-        <div class="rounded-2xl bg-white/5 p-5">
-          <p class="text-lg font-semibold text-white">Discovery → launch</p>
-          <p class="mt-2 text-slate-300">End-to-end product pods that deliver from idea to release.</p>
-        </div>
-        <div class="rounded-2xl bg-white/5 p-5">
-          <p class="text-lg font-semibold text-white">Co-delivery</p>
-          <p class="mt-2 text-slate-300">We integrate with your team, tooling, and ceremonies.</p>
-        </div>
-        <div class="rounded-2xl bg-white/5 p-5">
-          <p class="text-lg font-semibold text-white">Sustain & scale</p>
-          <p class="mt-2 text-slate-300">Ongoing optimization, experimentation, and platform support.</p>
-        </div>
-      </div>
-    </section>
-  </main>
+    const closeAllDropdowns = () => {
+      document.querySelectorAll('.dropdown-panel').forEach(p => p.classList.add('hidden'));
+    };
 
-  <footer class="relative z-10 border-t border-white/5 bg-slate-950/90 backdrop-blur">
-    <div class="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-10 md:flex-row md:items-center md:justify-between">
-      <div>
-        <p class="text-lg font-semibold text-white">Prodbiz Solutions</p>
-        <p class="text-sm text-slate-400">Product strategy, design, and engineering.</p>
-      </div>
-      <div class="flex gap-4 text-sm text-slate-300">
-        <a class="hover:text-white" href="index.html">Home</a>
-        <a class="hover:text-white" href="services.html">Services</a>
-        <a class="hover:text-white" href="contact.html">Contact</a>
-      </div>
-      <div class="text-sm text-slate-500">© 2025 Prodbiz Solutions</div>
+    toggle?.addEventListener('click', () => {
+      nav.classList.toggle('hidden');
+    });
+
+    nav?.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth < 768) nav.classList.add('hidden');
+        closeAllDropdowns();
+      });
+    });
+
+    dropdowns.forEach(drop => {
+      const button = drop.querySelector('button');
+      const panel = drop.querySelector('.dropdown-panel');
+      if (!button || !panel) return;
+
+      // Hover open on desktop; also close others
+      drop.addEventListener('mouseenter', () => {
+        if (window.innerWidth >= 768) {
+          closeAllDropdowns();
+          panel.classList.remove('hidden');
+        }
+      });
+
+      // Click toggle for desktop and mobile; stays open until outside click or new toggle
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const willOpen = panel.classList.contains('hidden');
+        closeAllDropdowns();
+        if (willOpen) panel.classList.remove('hidden');
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      const insideDropdown = e.target.closest('.nav-dropdown');
+      const insideNav = e.target.closest('#mainNav');
+      if (!insideDropdown && !insideNav) closeAllDropdowns();
+    });
+
+    // Gallery scripts
+    const audio = document.getElementById("background-music");
+    const playPauseButton = document.getElementById("play-pause-button");
+    const playIcon = document.getElementById("play-music");
+    const pauseIcon = document.getElementById("pause-music");
+    let isPlaying = false;
+
+    function togglePlayPause() {
+      if (isPlaying) {
+        audio.pause();
+        playIcon.classList.remove("hidden");
+        pauseIcon.classList.add("hidden");
+      } else {
+        audio.play();
+        playIcon.classList.add("hidden");
+        pauseIcon.classList.remove("hidden");
+      }
+      isPlaying = !isPlaying;
+    }
+
+    playPauseButton?.addEventListener("click", togglePlayPause);
+    audio?.addEventListener("ended", () => {
+      audio.currentTime = 0;
+      audio.play();
+    });
+
+    // Initialize Swiper
+    const swiper = new Swiper(".swiper", {
+      grabCursor: true,
+      initialSlide: 4,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      spaceBetween: 12,
+      speed: 900,
+      freeMode: false,
+      mousewheel: { thresholdDelta: 30 },
+      pagination: { el: ".swiper-pagination" },
+      on: {
+        click(event) {
+          swiper.slideTo(this.clickedIndex);
+        },
+      },
+    });
+
+    // Particles
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 160, density: { enable: true, value_area: 800 } },
+        color: { value: "#fff" },
+        shape: { type: "circle" },
+        opacity: { value: 0.3 },
+        size: { value: 4, random: true, anim: { enable: true, speed: 2, size_min: 0.1 } },
+        line_linked: { enable: false },
+        move: { enable: true, speed: 0.45, direction: "right", random: true, straight: false, out_mode: "none" },
+      },
+      retina_detect: true,
+    });
+
+    // Hero particles - light molecule style
+    particlesJS("hero-particles", {
+      particles: {
+        number: { value: 100, density: { enable: true, value_area: 900 } },
+        color: { value: "#e0f2fe" },
+        shape: { type: "circle" },
+        opacity: { value: 0.35 },
+        size: { value: 2.6, random: true, anim: { enable: true, speed: 1.8, size_min: 0.6 } },
+        line_linked: { enable: false },
+        move: { enable: true, speed: 0.5, direction: "none", random: true, straight: false, out_mode: "out" },
+      },
+      retina_detect: true,
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+<!--nav end-->
+<section class="about-page">
+
+<style>
+/* ================= SAFE ISOLATION ================= */
+.about-page,
+.about-page *{
+  box-sizing:border-box;
+}
+
+/* ================= PAGE WRAPPER ================= */
+.about-page{
+  font-family:'Inter',sans-serif;
+  background:#020617;
+  color:#ffffff;
+  width:100%;
+  overflow:hidden;
+  position:relative;
+}
+
+/* ================= FAST SLIDE ANIMATION ================= */
+.slide-left{
+  opacity:0;
+  transform:translateX(-60px);
+  transition:opacity .45s ease, transform .45s ease;
+  will-change:transform,opacity;
+}
+
+.slide-left.show{
+  opacity:1;
+  transform:translateX(0);
+}
+
+/* ================= HERO ================= */
+.about-hero{
+  min-height:70vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  padding:80px 16px 40px;
+  background:#020617;
+}
+
+.about-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 25% 20%, rgba(168,85,247,.45), transparent 55%),
+    radial-gradient(circle at 75% 70%, rgba(14,165,233,.45), transparent 55%);
+  z-index:0;
+}
+
+.about-hero-content{
+  max-width:900px;
+  text-align:center;
+  position:relative;
+  z-index:1;
+}
+
+.about-hero h1{
+  font-size:clamp(2.2rem,6vw,4rem);
+  font-weight:700;
+}
+
+.about-hero p{
+  margin-top:16px;
+  color:#cbd5f5;
+  font-size:1.05rem;
+}
+
+/* ================= CURVE SECTION ================= */
+.curve-section{
+  padding:110px 16px;
+  background:linear-gradient(180deg,#020617,#030a1a);
+}
+
+.curve-content{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+}
+
+.curve-card{
+  background:rgba(255,255,255,.06);
+  backdrop-filter:blur(14px);
+  border-radius:22px;
+  padding:28px;
+  border:1px solid rgba(255,255,255,.12);
+}
+
+.card-cyan{border-color:rgba(34,211,238,.4)}
+.card-violet{border-color:rgba(168,85,247,.4)}
+.card-emerald{border-color:rgba(16,185,129,.4)}
+
+.curve-card p{color:#cbd5f5}
+
+/* ================= FOUNDER ================= */
+.founder-section{
+  padding:110px 16px;
+}
+
+.founder-wrap{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+.founder-img img{
+  width:100%;
+  border-radius:24px;
+}
+
+/* Founder text emphasis */
+.founder-title{
+  font-size:2.6rem;
+  font-weight:800;
+  margin-bottom:6px;
+}
+
+.founder-role{
+  display:block;
+  font-size:1.1rem;
+  font-weight:600;
+  margin-bottom:14px;
+  color:#22d3ee;
+}
+
+.founder-content p{
+  color:#cbd5f5;
+  line-height:1.7;
+}
+
+/* ================= STORY ================= */
+.story-section{
+  padding:110px 16px;
+  background:#030712;
+}
+
+.story-block{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+  align-items:center;
+}
+
+.story-visual{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:22px;
+}
+
+.story-block p{
+  color:#cbd5f5;
+  line-height:1.7;
+}
+
+/* ================= MOBILE ================= */
+@media(max-width:768px){
+  .founder-wrap,
+  .story-block{
+    grid-template-columns:1fr;
+  }
+  .about-hero{
+    padding-top:60px;
+  }
+}
+</style>
+
+<!-- ================= HERO ================= -->
+<section class="about-hero">
+  <div class="about-hero-content slide-left">
+    <h1>Building Digital Brands That Matter</h1>
+    <p>We help businesses grow with design, technology, and strategy.</p>
+  </div>
+</section>
+
+<!-- ================= SERVICES CURVE ================= -->
+<section class="curve-section">
+  <div class="curve-content">
+    <div class="curve-card slide-left card-cyan">
+      <h3>Web Development</h3>
+      <p>High-performance, scalable websites built for speed and conversion.</p>
     </div>
-  </footer>
-</body>
-</html>
+    <div class="curve-card slide-left card-violet">
+      <h3>UI/UX Design</h3>
+      <p>Premium interfaces designed for clarity, usability, and engagement.</p>
+    </div>
+    <div class="curve-card slide-left card-emerald">
+      <h3>Brand Strategy</h3>
+      <p>Positioning, identity, and messaging that connects with your audience.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOUNDER ================= -->
+<section class="founder-section">
+  <div class="founder-wrap">
+    <div class="founder-img slide-left">
+      <img src="images/srikanth 02.png" alt="Founder">
+    </div>
+    <div class="founder-content slide-left">
+      <h2 class="founder-title">Meet Our Founder</h2>
+      <span class="founder-role">Founder & Managing Director</span>
+      <p>
+        Prodbiz Solutions was founded with a clear purpose — to merge creativity,
+        strategy, and technology into digital products that truly perform.
+        Our founder leads with a strong focus on quality, innovation, and
+        long-term partnerships.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STORY ================= -->
+<section class="story-section">
+  <div class="story-block">
+    <a href="our-beginning.html" class="slide-left">
+      <img class="story-visual" src="images/business-concept-with-team-close-up.jpg" alt="Our Beginning">
+    </a>
+    <div class="slide-left">
+      <h3>Our Beginning</h3>
+      <p>
+        Prodbiz Solutions began with a simple belief — great digital work should
+        be accessible, scalable, and impactful.
+      </p>
+      <p>
+        What started as a focused vision has evolved into a digital innovation
+        studio trusted by brands to design, build, and grow meaningful digital
+        experiences.
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+/* ================= FAST SCROLL OBSERVER ================= */
+const aboutObserver = new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+    entry.target.classList.toggle('show', entry.isIntersecting);
+  });
+},{
+  threshold:0.05,
+  rootMargin:"0px 0px -40px 0px"
+});
+
+document.querySelectorAll('.slide-left')
+  .forEach(el=>aboutObserver.observe(el));
+</script>
+
+</section>
+
+
+
 
